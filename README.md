@@ -1,47 +1,39 @@
-## t-rex-runner
+# TURTLE Runner
 
-the trex runner game extracted from chrome offline err page.
+Cette interface est une reprise du Dino Runner de google chrome. L'idée est de reprendre un des codes classiques d'internet, et de le modifier pour créer une différence marquante, distinctive. Cette différence sera l'ajout de latence, dans un jeu où la réactivité est primordiale. La figure du dinosaure est aussi remplacée par une tortue, symbolisant la lenteur.
 
-see the [source](https://cs.chromium.org/chromium/src/components/neterror/resources/offline.js?q=t-rex+package:%5Echromium$&dr=C&l=7) from chromium
+## Objectifs pédagogiques
+
+#### Pour un objectif global, qui est de montrer que nous construisons des habitudes dans nos interfaces numériques, et que ces habitudes s'apprennent et se travaillent :
+
+- faire comprendre la notion de latence
+- montrer que nous sommes habitués à une réactivité quasi-parfaite, et que la latence vient créer une forme de perte de contrôle de nos actions.
+
+## Quel déroulement dans l'expérience / le jeu ?
+
+#### Quels objectifs doit atteindre l'utilisateur ?
+
+- aller le plus loin possible dans le jeu, faire le meilleur score
+- prendre le contrôle de la latence, s'y habituer pour réussir à jouer presque "normalement"
+
+#### Quelles actions va effectuer l'utilisateur ?
+
+- appuyer sur le bouton physique ( équivalent de la barre espace )
+  - comprendre qu'il y a de la latence
+  - se manger un obstacle
+    - comprendre qu'il y a de la latence
+    - ne pas comprendre et juste perdre
+  - sauter au-dessus d'un obstacle
+    - prendre en main la latence
+      - finir par perdre (la défaite dans ce jeu est inévitable)
+
+#### Quelles ***émotions*** va ressentir l'utilisateur ?
+
+- de la ***frustration*** lorsqu'on se mange un cactus
+- de la ***panique*** quand on commence à perdre le contrôle de notre tortue (soit à cause de la vitesse soit à cause de la latence)
+- de la ***satisfaction*** à chaque fois que le bruit du score qui monte retentit
 
 
-[go and enjoy! :smile: ](http://wayou.github.io/t-rex-runner/)
 
-![chrome offline game cast](assets/screenshot.gif)
 
-## Interesting Forks/In Chinese, we call it 「花样玩法」
-
-- [vianroyal](https://github.com/vianroyal)/[t-rex-runner](https://github.com/vianroyal/t-rex-runner) [Kumamon runner](http://vianroyal.github.io/t-rex-runner/) 
-<br>
-
-![](assets/kumamon-runner.gif)
-
-- [xkuga](https://github.com/xkuga)/[t-rex-runner](https://github.com/xkuga/t-rex-runner) [Hello KuGou](http://hellokugou.com/) 
-<br>
-
-![](assets/hello-kugou.gif)
-
-- [d-nery](https://github.com/d-nery/)/[t-rex-runner](https://github.com/d-nery/t-rex-runner) [Novas coisas](http://d-nery.github.io/t-rex-runner/) 
-<br>
-
-![](assets/novas-coisas.gif)
-
-- [chirag64](https://github.com/chirag64)/[t-rex-runner-bot](https://github.com/chirag64/t-rex-runner-bot) [t-rex runner bot](https://chirag64.github.io/t-rex-runner-bot/) 
-<br>
-
-![](assets/t-rex-runner-bot.gif)
-
-- [19janil](https://github.com/19janil)/[t-rex-runner](https://github.com/19janil/t-rex-runner) [t-rex runner](https://19janil.github.io/t-rex-runner/) 
-<br>
-
-![](assets/t-rex-runner-19janil.gif)
-
-- [enthus1ast](https://github.com/enthus1ast)/[chromeTrip](https://github.com/enthus1ast/chromeTrip) [Chrome Trip by code0](https://code0.itch.io/chrome-trip) 
-<br>
-
-![](https://user-images.githubusercontent.com/13794470/37289691-964618be-260a-11e8-8c4a-6df04d6c490d.gif)
-
-- [zouariste](https://github.com/zouariste)/[corona-runner](https://github.com/zouariste/corona-runner) [Corona runner](https://zouariste.github.io/corona-runner/) 
-<br>
-
-![](https://raw.githubusercontent.com/zouariste/corona-runner/gh-pages/assets/corona-runner.gif)
+- afficher un tableau des meilleurs scores ?
