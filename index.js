@@ -50,7 +50,7 @@
     // };
 
 let latence = 500;
-
+let defaultWidth;
 (function () {
     'use strict';
     /**
@@ -128,7 +128,9 @@ let latence = 500;
      * @const
      */
     var DEFAULT_WIDTH = 600;
-
+    defaultWidth = DEFAULT_WIDTH;
+    let windowWidth = window.innerWidth;
+    console.log(windowWidth);
     /**
      * Frames per second.
      * @const
@@ -136,7 +138,9 @@ let latence = 500;
     var FPS = 60;
 
     /** @const */
-    var IS_HIDPI = window.devicePixelRatio > 1;
+    // var IS_HIDPI = window.devicePixelRatio > 1;
+    var IS_HIDPI = true;
+
 
     /** @const */
     var IS_IOS = /iPad|iPhone|iPod/.test(window.navigator.platform);
@@ -406,6 +410,7 @@ let latence = 500;
 
             this.containerEl = document.createElement('div');
             this.containerEl.className = Runner.classes.CONTAINER;
+            this.containerEl.style.transform = "scale(" + windowWidth/defaultWidth + ")";
 
             // Player canvas container.
             this.canvas = createCanvas(this.containerEl, this.dimensions.WIDTH,
@@ -1584,7 +1589,7 @@ let latence = 500;
         SPEED_DROP_COEFFICIENT: 3,
         SPRITE_WIDTH: 10,
         START_X_POS: 50,
-        WIDTH: 60.5,
+        WIDTH: 60.315,
         WIDTH_DUCK: 59
     };
 
@@ -2760,6 +2765,7 @@ let latence = 500;
                 this.dimensions.WIDTH));
         }
     };
+
 })();
 
 
@@ -2768,3 +2774,6 @@ function onDocumentLoad() {
 }
 
 document.addEventListener('DOMContentLoaded', onDocumentLoad);
+
+let runnerContainer = document.querySelector('.runner-container');
+// runnerContainer.style.transform = "scale(" + windowWidth/defaultWidth + ")";

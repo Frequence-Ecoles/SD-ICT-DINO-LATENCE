@@ -177,3 +177,8 @@ html, body {
 body {
   background-color: #29235C;
 }
+
+.runner-container {
+  transform-origin: top center;
+  margin-top: 20vh;
+}
