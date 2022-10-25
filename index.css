@@ -171,3 +171,9 @@ html, body {
   transition: transform 250ms cubic-bezier(0.4, 0, 1, 1) 400ms;
   z-index: 2;
 }
+
+/* —————— */
+
+body {
+  background-color: #29235C;
+}
