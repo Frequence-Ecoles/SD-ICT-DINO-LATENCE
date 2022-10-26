@@ -49,7 +49,7 @@
     //     }
     // };
 
-let latence = 500;
+let latence = 600;
 let defaultWidth;
 (function () {
     'use strict';
