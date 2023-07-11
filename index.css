@@ -195,16 +195,15 @@ body {
 }
 
 #enter-game-text {
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: var(--type);
   color: var(--sd-red);
   font-weight: normal;
-  padding: 1rem;
+  padding: 1.5rem;
   border: solid 3px var(--sd-red);
   border-radius: 2rem;
-  width: 47rem;
+  width: auto;
   text-align: center;
-
   position: absolute;
   top: 30px;
   left: 30px;
