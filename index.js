@@ -434,8 +434,12 @@ let defaultWidth;
 
             this.outerContainerEl.appendChild(this.containerEl);
 
+            let enterGameText = document.getElementById('enter-game-text');
+            
             if (IS_MOBILE) {
                 this.createTouchController();
+                enterGameText.classList.add('mobile');
+                enterGameText.innerHTML = "Touche l'écran pour jouer !";
             }
 
             this.startListening();
@@ -534,9 +538,9 @@ let defaultWidth;
                 this.containerEl.style.webkitAnimation = 'intro .4s ease-out 1 both';
                 this.containerEl.style.width = this.dimensions.WIDTH + 'px';
 
-                // if (this.touchController) {
-                //     this.outerContainerEl.appendChild(this.touchController);
-                // }
+                if (this.touchController) {
+                    this.outerContainerEl.appendChild(this.touchController);
+                }
                 this.playing = true;
                 this.activated = true;
             } else if (this.crashed) {
@@ -784,6 +788,12 @@ let defaultWidth;
                         Runner.keycodes.JUMP[keyCode])) {
                     this.restart();
                 }
+                // restart game on touch
+                if (IS_MOBILE && deltaTime >= this.config.GAMEOVER_CLEAR_TIME &&
+                    isjumpKey) {
+                    this.restart();
+                }
+
             } else if (this.paused && isjumpKey) {
                 // Reset the jump state
                 this.tRex.reset();

@@ -191,7 +191,10 @@ body {
 
 .runner-container {
   transform-origin: top center;
-  margin-top: 20vh;
+  margin-top: 10vh;
+  display : flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #enter-game-text {
@@ -208,4 +211,11 @@ body {
   top: 30px;
   left: 30px;
   margin: 0;
+}
+
+.mobile {
+  font-size: 1.5rem !important;
+  padding: 1rem !important;
+  border-radius: 1rem !important;
+  /* background-color: lime; */
 }
