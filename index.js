@@ -2787,3 +2787,7 @@ document.addEventListener('DOMContentLoaded', onDocumentLoad);
 
 let runnerContainer = document.querySelector('.runner-container');
 // runnerContainer.style.transform = "scale(" + windowWidth/defaultWidth + ")";
+
+screen.orientation.addEventListener('change', function () {
+    window.location.reload();
+});
