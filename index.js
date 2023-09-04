@@ -49,6 +49,8 @@
     //     }
     // };
 
+let fullscreenAvailable = true;
+
 let latence = 600;
 let defaultWidth;
 (function () {
@@ -2791,3 +2793,43 @@ let runnerContainer = document.querySelector('.runner-container');
 screen.orientation.addEventListener('change', function () {
     window.location.reload();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Hello World!");
+    var elem = document.body;
+    console.log('document body to fullscreen ' + elem)
+    document.addEventListener('click', function() {
+      if (fullscreenAvailable) {
+        requestFullScreen(elem);
+        fullscreenAvailable = false;
+      }
+    })
+    
+    function requestFullScreen(element) {
+    
+      // Supports most browsers and their versions.
+      var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullScreen;
+    
+      if (requestMethod) { // Native full screen.
+        requestMethod.call(element);
+      } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
+        var wscript = new ActiveXObject("WScript.Shell");
+        if (wscript !== null) {
+          wscript.SendKeys("{F11}");
+        }
+      }
+    }
+    
+    function closeFullscreen() {
+    
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) {
+        /* Safari */
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) {
+        /* IE11 */
+        document.msExitFullscreen();
+      }
+    }
+  });
